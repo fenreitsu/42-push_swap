@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/14 22:34:29 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/15 16:34:24 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,32 @@ typedef struct s_stack
 	int		size;
 }	t_stack;
 
+typedef struct s_stats
+{
+	int	pa;
+	int	pb;
+	int sa;
+	int	sb;
+	int	ss;
+	int	ra;
+	int	rb;
+	int	rr;
+	int	rra;
+	int	rrb;
+	int	rrr;
+	int	total;
+} t_stats;
+
 void	stack_init(t_stack *s);
 void	stack_clear(t_stack *s);
 t_node	*stack_new_node(int value);
 void	stack_push_top(t_stack *s, t_node *new_node);
 t_node	*stack_pop_top(t_stack *s);
 t_node	*stack_get_last(t_stack *s);
+void	pa(t_stack *a, t_stack *b, t_stats *stats);
+void	pb(t_stack *a, t_stack *b, t_stats *stats);
+void	sa(t_stack *a, t_stats *stats);
+void	sb(t_stack *b, t_stats *stats);
+void	ss(t_stack *a, t_stack *b, t_stats *stats);
 
 #endif

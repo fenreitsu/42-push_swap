@@ -1,3 +1,5 @@
 *.pdf
 GU*.md
-tests/
+/libft/*.a
+/libft/*.o
+a.out
