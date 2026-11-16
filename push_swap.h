@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/15 16:34:24 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/16 18:32:37 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,11 @@ void	pb(t_stack *a, t_stack *b, t_stats *stats);
 void	sa(t_stack *a, t_stats *stats);
 void	sb(t_stack *b, t_stats *stats);
 void	ss(t_stack *a, t_stack *b, t_stats *stats);
+void	ra(t_stack *a, t_stats *stats);
+void	rb(t_stack *b, t_stats *stats);
+void	rr(t_stack *a, t_stack *b, t_stats *stats);
+void	rra(t_stack *a, t_stats *stats);
+void	rrb(t_stack *b, t_stats *stats);
+void	rrr(t_stack *a, t_stack *b, t_stats *stats);
 
 #endif
