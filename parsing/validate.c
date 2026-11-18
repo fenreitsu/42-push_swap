@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 19:47:45 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/14 20:11:53 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:14:56 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,24 @@ int	validate_syntax(const char *str)
 	}
 	return (0);
 }
+
+int	validate_duplicates(t_stack *a)
+{
+	t_node	*current;
+	t_node	*comp;
+
+	current = a ->head;
+	while (current != NULL)
+	{
+		comp = current->next;
+		while (comp != NULL)
+		{
+			if (current ->value == comp->value)
+				return (0);
+			comp = comp->next;
+		}
+		current = current ->next;
+	}
+	return (1);
+}
+

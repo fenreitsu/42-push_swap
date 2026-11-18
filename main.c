@@ -6,11 +6,18 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:42:31 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/13 21:54:55 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:05:35 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "push_swap.h"
+
 int	main(int argc, char** argv)
 {
-	parse_args(argc, argv);
+	t_config	cfg;
+	t_stack		a;
+
+	stack_init(&a);
+	if (parse_args(argc, argv, &a, &cfg) == 0)
+		error_exit();
 }

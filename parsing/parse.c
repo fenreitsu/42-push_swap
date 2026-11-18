@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:55:41 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/16 20:53:54 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/18 22:16:55 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,7 @@
 
 int	transfer_var(char **arr, t_stack *a)
 {
-	long	number;
-	int		valid;
 	int		len;
-	t_node *new_node;
 
 	if (arr == NULL || arr[0] == NULL)
 		return (0);
@@ -28,15 +25,11 @@ int	transfer_var(char **arr, t_stack *a)
 	{
 		if (validate_syntax(arr[len]) == 0)
 			return (0);
-		number = ft_atol(arr[len]);
-		if (number < -2147483648 || number > 2147483647)
+		if (ft_atol(arr[len], a) == 0)
 			return (0);
-		valid = number;
-		new_node = stack_new_node(valid);
-		if (new_node == NULL)
-			return (0);
-		stack_push_top(a, new_node);
 	}
+	if (validate_duplicates(a) == 0)
+		return (0);
 	return (1);
 }
 
@@ -60,11 +53,11 @@ int	parse_args(int argc, char **argv, t_stack *a, t_config *cfg)
 	{
 		arr = ft_split(argv[i], ' ');
 		if (arr == NULL)
-			return (0);
+			return (free_arr(arr, a, 0));
 		if (transfer_var(arr, a) == 0)
-			return (free_arr(arr, 0));
+			return (free_arr(arr, a, 0));
+		free_arr(arr, a, 1);
 		i++;
-		free_arr(arr, 1);
 	}
 	return (1);
 }
