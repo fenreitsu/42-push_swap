@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/18 18:27:31 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/18 20:27:28 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ double	compute_disorder(t_stack *a);
 int		sort_verifier(t_stack *a);
 int		get_min_pos(t_stack *a);
 void	assign_index(t_stack *a);
+void	sort_simple(t_stack *a, t_stack *b, t_stats *stats);
 
 #endif
