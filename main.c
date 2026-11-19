@@ -6,13 +6,13 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:42:31 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/18 22:05:35 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 19:30:55 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char** argv)
+int	main(int argc, char **argv)
 {
 	t_config	cfg;
 	t_stack		a;
