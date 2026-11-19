@@ -6,11 +6,14 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:42:31 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 20:18:06 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:41:22 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
+#include "libft/libft.h"
+
 
 // int	main(int argc, char **argv)
 // {
@@ -21,9 +24,6 @@
 // 	if (parse_args(argc, argv, &a, &cfg) == 0)
 // 		error_exit();
 // }
-
-#include "push_swap.h"
-#include <stdio.h>
 
 int	main(int argc, char **argv)
 {

@@ -6,11 +6,11 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 21:51:46 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 19:45:59 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:52:54 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	error_exit(void)
 {

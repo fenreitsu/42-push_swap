@@ -6,13 +6,13 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:55:41 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/18 22:16:55 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:52:40 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
-int	transfer_var(char **arr, t_stack *a)
+static int	transfer_var(char **arr, t_stack *a)
 {
 	int		len;
 
