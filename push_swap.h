@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/18 20:27:28 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/19 19:36:42 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,22 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+#include <limits.h>
+
+typedef enum e_strategy
+{
+	START,
+	SIMPLE,
+	MEDIUM,
+	COMPLEX,
+	ADAPTATIVE,
+}	t_strategy;
+
+typedef struct s_config
+{
+	t_strategy	strategy;
+	int			bench;
+}	t_config;
 
 typedef struct s_node
 {
