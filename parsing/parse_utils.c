@@ -6,13 +6,13 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 17:07:00 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/18 22:20:12 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:08:59 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	add_numb(long number, t_stack *a)
+static int	add_numb(long number, t_stack *a)
 {
 	int		valid;
 	t_node	*new_node;

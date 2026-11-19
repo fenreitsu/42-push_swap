@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/19 19:36:42 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:22:47 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,5 +83,8 @@ int		sort_verifier(t_stack *a);
 int		get_min_pos(t_stack *a);
 void	assign_index(t_stack *a);
 void	sort_simple(t_stack *a, t_stack *b, t_stats *stats);
+void	error_exit(void);
+int		free_arr(char **arr, t_stack *a, int b);
+int		match_flag(char *flag, t_config *cfg);
 
 #endif
