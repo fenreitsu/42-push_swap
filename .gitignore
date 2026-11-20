@@ -1,5 +1,6 @@
 *.pdf
 GU*.md
+P*.md
 /libft/*.a
 /libft/*.o
 a.out
