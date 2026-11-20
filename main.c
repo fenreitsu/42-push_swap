@@ -3,50 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/11/13 21:42:31 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 20:18:06 by rfavela-         ###   ########.fr       */
+/*   Created: 2026/11/20 15:50:33 by reiascan          #+#    #+#             */
+/*   Updated: 2026/11/20 19:04:59 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft/libft.h"
 #include "push_swap.h"
 
-// int	main(int argc, char **argv)
-// {
-// 	t_config	cfg;
-// 	t_stack		a;
-
-// 	stack_init(&a);
-// 	if (parse_args(argc, argv, &a, &cfg) == 0)
-// 		error_exit();
-// }
-
-#include "push_swap.h"
-#include <stdio.h>
+int	parse_args(int argc, char **argv, t_stack *a, t_config *cfg);
 
 int	main(int argc, char **argv)
 {
-	t_config	cfg;
 	t_stack		a;
-	t_node		*current;
+	t_stack		b;
+	t_config	cfg;
+	t_stats		stats;
 
+	if (argc < 2)
+		return (0);
 	stack_init(&a);
-	if (parse_args(argc, argv, &a, &cfg) == 0)
-		error_exit();
-
-	printf("\n--- PARSING RESULT ---\n");
-	printf("Stack A size: %d\n", a.size);
-	printf("Stack A values: ");
-
-	current = a.head;
-	while (current != NULL)
+	stack_init(&b);
+	ft_memset(&stats, 0, sizeof(t_stats));
+	if (!parse_args(argc, argv, &a, &cfg))
 	{
-		printf("%d ", current->value);
-		current = current->next;
+		stack_clear(&a);
+		stack_clear(&b);
+		write(2, "Error\n", 6);
+		return (1);
 	}
-	printf("\n---------------------\n");
-
+	if (a.size > 1 && !sort_verifier(&a))
+		sort_simple(&a, &b, &stats);
 	stack_clear(&a);
+	stack_clear(&b);
 	return (0);
 }
