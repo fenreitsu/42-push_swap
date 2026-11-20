@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/19 20:22:47 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/20 18:37:36 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,5 +86,8 @@ void	sort_simple(t_stack *a, t_stack *b, t_stats *stats);
 void	error_exit(void);
 int		free_arr(char **arr, t_stack *a, int b);
 int		match_flag(char *flag, t_config *cfg);
-
+int		parse_args(int argc, char **argv, t_stack *a, t_config *cfg);
+int		ft_atol(const char *nptr, t_stack *a);
+int		validate_duplicates(t_stack *a);
+int		validate_syntax(const char *str);
 #endif

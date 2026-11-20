@@ -6,11 +6,11 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 17:07:00 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 20:08:59 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:52:48 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static int	add_numb(long number, t_stack *a)
 {

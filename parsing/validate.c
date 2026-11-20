@@ -6,11 +6,11 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 19:47:45 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/18 22:14:56 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/19 20:52:35 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	validate_syntax(const char *str)
 {
