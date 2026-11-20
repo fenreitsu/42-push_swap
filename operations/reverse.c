@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 16:16:32 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/16 18:34:22 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/20 19:49:28 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	rrb(t_stack *b, t_stats *stats)
 		stats->rrb++;
 		stats->total++;
 	}
-	write (1, "rrb\n", 4);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack *a, t_stack *b, t_stats *stats)
