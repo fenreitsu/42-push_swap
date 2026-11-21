@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/21 12:46:19 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/21 21:57:09 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <unistd.h>
 # include <limits.h>
 # include "libft/libft.h"
-# include <math.h>
 
 typedef enum e_strategy
 {
@@ -93,5 +92,6 @@ int		ft_atol(const char *nptr, t_stack *a);
 int		validate_duplicates(t_stack *a);
 int		validate_syntax(const char *str);
 void	sort_medium(t_stack *a, t_stack *b, t_stats *stats);
+int		ft_sqrt(int n);
 
 #endif
