@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/21 11:11:05 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/21 13:08:48 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,5 +93,6 @@ void	sort_simple(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_medium(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_complex(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_adaptive(t_stack *a, t_stack *b, t_stats *stats);
+void	print_bench(t_stats *stats, double disorder, t_config *cfg);
 
 #endif
