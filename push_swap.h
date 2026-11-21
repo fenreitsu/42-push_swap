@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/19 22:32:37 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/21 12:46:19 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include "libft/libft.h"
+# include <math.h>
 
 typedef enum e_strategy
 {
@@ -91,5 +92,6 @@ int		parse_args(int argc, char **argv, t_stack *a, t_config *cfg);
 int		ft_atol(const char *nptr, t_stack *a);
 int		validate_duplicates(t_stack *a);
 int		validate_syntax(const char *str);
+void	sort_medium(t_stack *a, t_stack *b, t_stats *stats);
 
 #endif
