@@ -6,10 +6,11 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 21:55:41 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 22:51:26 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/22 17:33:21 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../libft/libft.h"
 #include "../push_swap.h"
 
 static int	transfer_var(char **arr, t_stack *a)
@@ -37,7 +38,7 @@ int	parse_args(int argc, char **argv, t_stack *a, t_config *cfg)
 {
 	char	**arr;
 	int		i;
-	
+
 	i = 1;
 	cfg->strategy = START;
 	cfg->bench = 0;

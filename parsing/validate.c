@@ -6,7 +6,7 @@
 /*   By: rfavela- <rfavela-@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/14 19:47:45 by rfavela-          #+#    #+#             */
-/*   Updated: 2026/11/19 20:52:35 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/22 13:06:16 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,3 @@ int	validate_duplicates(t_stack *a)
 	}
 	return (1);
 }
-
