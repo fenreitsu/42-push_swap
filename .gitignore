@@ -4,3 +4,4 @@ P*.md
 /libft/*.a
 /libft/*.o
 a.out
+*.txt
