@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/21 13:08:48 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/21 21:57:09 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-#include <limits.h>
+# include <limits.h>
 
 typedef enum e_strategy
 {
@@ -49,7 +49,7 @@ typedef struct s_stats
 {
 	int	pa;
 	int	pb;
-	int sa;
+	int	sa;
 	int	sb;
 	int	ss;
 	int	ra;
@@ -59,7 +59,7 @@ typedef struct s_stats
 	int	rrb;
 	int	rrr;
 	int	total;
-} t_stats;
+}	t_stats;
 
 void	stack_init(t_stack *s);
 void	stack_clear(t_stack *s);
@@ -86,6 +86,7 @@ void	rra(t_stack *a, t_stats *stats);
 void	rrb(t_stack *b, t_stats *stats);
 void	rrr(t_stack *a, t_stack *b, t_stats *stats);
 double	compute_disorder(t_stack *a);
+int		ft_sqrt(int n);
 int		sort_verifier(t_stack *a);
 int		get_min_pos(t_stack *a);
 void	assign_index(t_stack *a);
