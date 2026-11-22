@@ -6,11 +6,23 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/18 18:33:40 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/18 18:38:51 by reiascan         ###   ########.fr       */
+/*   Updated: 2026/11/22 13:01:16 by rfavela-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+int	ft_sqrt(int n)
+{
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (0);
+	while ((i * i) <= n)
+		i++;
+	return (i - 1);
+}
 
 int	sort_verifier(t_stack *a)
 {
