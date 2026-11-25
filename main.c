@@ -48,7 +48,7 @@ int	main(int argc, char **argv)
 	disorder = compute_disorder(&a);
 	if (a.size > 1 && !sort_verifier(&a))
 		get_strategy(&a, &b, &stats, &cfg);
-	print_bench(&stats, disorder, &cfg);
+	print_bench(&stats, disorder, &cfg, a.size);
 	stack_clear(&a);
 	stack_clear(&b);
 	return (0);

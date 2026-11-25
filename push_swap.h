@@ -6,7 +6,7 @@
 /*   By: reiascan <reiascan@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/13 22:29:54 by reiascan          #+#    #+#             */
-/*   Updated: 2026/11/21 21:57:09 by rfavela-         ###   ########.fr       */
+/*   Updated: 2026/11/25 22:14:47 by reiascan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ typedef struct s_stats
 	int	rrb;
 	int	rrr;
 	int	total;
+	int	silent_op;
 }	t_stats;
 
 void	stack_init(t_stack *s);
@@ -93,6 +94,7 @@ void	sort_simple(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_medium(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_complex(t_stack *a, t_stack *b, t_stats *stats);
 void	sort_adaptive(t_stack *a, t_stack *b, t_stats *stats);
-void	print_bench(t_stats *stats, double disorder, t_config *cfg);
+void	print_bench(t_stats *stats, double disorder, t_config *cfg, int size);
+void	confirm_op_printer(char *op, int confirm_op);
 
 #endif

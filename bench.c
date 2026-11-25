@@ -26,7 +26,8 @@ static void	print_disorder(double disorder)
 	ft_putstr_fd("%\n", 2);
 }
 
-static const char	*get_strategy_label(t_strategy strategy, double disorder)
+static const char	*get_strategy_label(t_strategy strategy,
+	double disorder, int size)
 {
 	if (strategy == SIMPLE)
 		return ("Simple / O(n^2)\n");
@@ -36,7 +37,7 @@ static const char	*get_strategy_label(t_strategy strategy, double disorder)
 		return ("Complex / O(n log n)\n");
 	if (strategy == ADAPTIVE)
 	{
-		if (disorder < 0.2)
+		if (disorder < 0.2 || size <= 5)
 			return ("Adaptive / O(n^2)\n");
 		if (disorder < 0.5)
 			return ("Adaptive / O(n√n)\n");
@@ -71,16 +72,18 @@ static void	print_ops(t_stats *stats)
 	ft_putnbr_fd(stats->rrb, 2);
 	ft_putstr_fd("  rrr: ", 2);
 	ft_putnbr_fd(stats->rrr, 2);
+	ft_putchar_fd('\n', 2);
 }
 
-void	print_bench(t_stats *stats, double disorder, t_config *cfg)
+void	print_bench(t_stats *stats, double disorder, t_config *cfg, int size)
 {
 	if (!stats || !cfg || !cfg->bench)
 		return ;
 	ft_putstr_fd("[bench] disorder: ", 2);
 	print_disorder(disorder);
 	ft_putstr_fd("[bench] strategy: ", 2);
-	ft_putstr_fd((char *)(get_strategy_label(cfg->strategy, disorder)), 2);
+	ft_putstr_fd((char *)(get_strategy_label(cfg->strategy, \
+disorder, size)), 2);
 	ft_putstr_fd("[bench] total_ops: ", 2);
 	ft_putnbr_fd(stats->total, 2);
 	ft_putchar_fd('\n', 2);
