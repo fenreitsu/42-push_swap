@@ -5,3 +5,6 @@ P*.md
 /libft/*.o
 a.out
 *.txt
+checker_linux
+ev*.md
+push_swap
