@@ -49,15 +49,15 @@ static void	run_case(t_strategy strat, int bench_on, double disorder,
 
 int	main(void)
 {
-	run_case(ADAPTATIVE, 0, 0.35, "CASO 1: BENCH APAGADO (no debe imprimir nada)");
+	run_case(ADAPTIVE, 0, 0.35, "CASO 1: BENCH APAGADO (no debe imprimir nada)");
 	printf("\n");
 	run_case(SIMPLE, 1, 0.1234, "CASO 2: SIMPLE (12.34%)");
 	printf("\n");
-	run_case(ADAPTATIVE, 1, 0.10, "CASO 3: ADAPTATIVE BAJO -> O(n^2)");
+	run_case(ADAPTIVE, 1, 0.10, "CASO 3: ADAPTIVE BAJO -> O(n^2)");
 	printf("\n");
-	run_case(ADAPTATIVE, 1, 0.35, "CASO 4: ADAPTATIVE MEDIO -> O(n*sqrt(n))");
+	run_case(ADAPTIVE, 1, 0.35, "CASO 4: ADAPTIVE MEDIO -> O(n*sqrt(n))");
 	printf("\n");
-	run_case(ADAPTATIVE, 1, 0.85, "CASO 5: ADAPTATIVE ALTO -> O(n log n)");
+	run_case(ADAPTIVE, 1, 0.85, "CASO 5: ADAPTIVE ALTO -> O(n log n)");
 	printf("\n");
 	return (0);
 }

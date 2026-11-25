@@ -23,7 +23,7 @@ typedef enum e_strategy
 	SIMPLE,
 	MEDIUM,
 	COMPLEX,
-	ADAPTATIVE,
+	ADAPTIVE,
 }	t_strategy;
 
 typedef struct s_config
@@ -67,7 +67,6 @@ t_node	*stack_new_node(int value);
 void	stack_push_top(t_stack *s, t_node *new_node);
 t_node	*stack_pop_top(t_stack *s);
 t_node	*stack_get_last(t_stack *s);
-void	error_exit(void);
 int		free_arr(char **arr, t_stack *a, int b);
 int		match_flag(char *flag, t_config *cfg);
 int		parse_args(int argc, char **argv, t_stack *a, t_config *cfg);
