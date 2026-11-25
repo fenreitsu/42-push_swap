@@ -77,7 +77,7 @@ int	match_flag(char *flag, t_config *cfg)
 		if ((flag_len == 9) && (ft_strncmp(flag, "--complex", flag_len)) == 0)
 			return (change_conf(cfg, COMPLEX));
 		if ((flag_len == 10) && (ft_strncmp(flag, "--adaptive", flag_len)) == 0)
-			return (change_conf(cfg, ADAPTATIVE));
+			return (change_conf(cfg, ADAPTIVE));
 	}
 	if ((flag_len == 7) && (ft_strncmp(flag, "--bench", flag_len)) == 0
 		&& cfg->bench == 0)

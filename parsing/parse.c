@@ -49,7 +49,7 @@ int	parse_args(int argc, char **argv, t_stack *a, t_config *cfg)
 		i++;
 	}
 	if (cfg->strategy == START)
-		cfg->strategy = ADAPTATIVE;
+		cfg->strategy = ADAPTIVE;
 	while (argc-- > i)
 	{
 		arr = ft_split(argv[argc], ' ');
