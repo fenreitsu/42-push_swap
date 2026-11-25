@@ -34,7 +34,7 @@ static const char	*get_strategy_label(t_strategy strategy, double disorder)
 		return ("Medium / O(n√n)\n");
 	if (strategy == COMPLEX)
 		return ("Complex / O(n log n)\n");
-	if (strategy == ADAPTATIVE)
+	if (strategy == ADAPTIVE)
 	{
 		if (disorder < 0.2)
 			return ("Adaptive / O(n^2)\n");

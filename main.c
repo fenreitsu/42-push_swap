@@ -21,7 +21,7 @@ static void	get_strategy(t_stack *a, t_stack *b, t_stats *stats, t_config *cfg)
 		sort_medium(a, b, stats);
 	if (cfg->strategy == COMPLEX)
 		sort_complex(a, b, stats);
-	if (cfg->strategy == ADAPTATIVE)
+	if (cfg->strategy == ADAPTIVE)
 		sort_adaptive(a, b, stats);
 }
 
