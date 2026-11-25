@@ -19,7 +19,7 @@ void	sort_adaptive(t_stack *a, t_stack *b, t_stats *stats)
 	if (!a || !b || sort_verifier(a))
 		return ;
 	disorder = compute_disorder(a);
-	if (disorder < 0.2)
+	if (disorder < 0.2 || a->size <= 5)
 		sort_simple(a, b, stats);
 	else if (disorder >= 0.2 && disorder < 0.5)
 		sort_medium(a, b, stats);
