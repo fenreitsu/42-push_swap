@@ -42,6 +42,8 @@ disorder = inverted pairs / total pairs
 
 A sorted list gives `0.00%` and a reverse-sorted list gives `100.00%`. The value is computed once, before any instruction is emitted, and it is also reported by `--bench`.
 
+Threshold justification: the `0.20` and `0.50` cut-offs are the ones defined by the 42 subject; we did not tune them to our own inputs. The index only counts inversions, so it cannot distinguish a reverse-sorted stack from a random one: a reverse-sorted stack has maximum disorder but is perfectly structured. In that case `sort_simple` finds the minimum at the bottom and needs one reverse rotation per extraction, so it performs close to linearly. On a random permutation the minimum is on average halfway down the stack, and the same scans reach the quadratic bound. Adaptive follows the subject cut-offs, so reversed input is sent to `complex`; this is a limitation of the metric, not a claim that `simple` is always worse.
+
 ---
 
 ## Strategies
@@ -132,12 +134,14 @@ The report shows the initial disorder, the strategy with its complexity class, t
 
 ## Complexity analysis
 
+Time is counted as the number of emitted `push_swap` operations, which is the metric used by the subject, not CPU time. The two stacks already hold `n` nodes, so total space is `O(n)`; extra space on top of them is `O(1)` because indices are stored inside each node. `Simple` has an `O(n²)` upper bound for arbitrary input, but on reverse-sorted input it is close to `O(n)` because the minimum is always at the bottom. `complex` stays near `O(n log n)` regardless of order.
+
 | Method | Time | Auxiliary space |
 | :--- | :--- | :--- |
 | Simple | O(n²) | O(1) beyond the node lists |
 | Medium | O(n√n) | O(1) beyond the node lists |
 | Complex | O(n log n) | O(1) beyond the node lists |
-| Adaptive | whichever of the three is selected | O(1) beyond the node lists |
+| Adaptive | O(n²) worst case | O(1) beyond the node lists |
 
 All methods work on the same linked stacks. Normalised indices are stored in each node, so no extra array is needed during sorting.
 
